@@ -23,14 +23,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  async onSubmit() {
+  async loginSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn('Under Component', this.testForm.value);
     try {
       const signinSuccess = await this.authService.signin(this.testForm.value);
       if (signinSuccess) {
         console.log('Sucessfully Signin', signinSuccess);
-      this.router.navigate(['/first-time-password']);
       }
     } catch (error) {
       alert(JSON.stringify(error));
