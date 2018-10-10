@@ -1,9 +1,7 @@
-
 export class User {
   static default = new User(false);
-  constructor(public signedIn: boolean, public username?: string, public userId?: string) { }
+  constructor(public signedIn: boolean, public username?: string, public userId?: string, public idToken?: string) { }
 }
-
 export interface SignupData {
   username?: string;
   password?: string;
@@ -14,3 +12,11 @@ export interface SignupData {
 export interface SignupForm extends SignupData {
   confirmPassword?: string;
 }
+
+
+export interface S3ConfigParams {
+  bucketName: string;
+  folderPath?: string;
+}
+
+
