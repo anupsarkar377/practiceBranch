@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import Amplify, { Auth } from 'aws-amplify';
 
-
 Amplify.configure({
   Auth: {
     region: 'ap-south-1',
@@ -21,7 +20,6 @@ export class AuthService {
     console.log('signin user: ', JSON.stringify(user));
     const username = user.username;
     const password = user.password;
-
     console.log(username, password);
     try {
       const signedInUser = await Auth.signIn(username, password);
@@ -32,19 +30,5 @@ export class AuthService {
     }
   }
 
-
-  async confirmSignin(user) {
-    const newPassword = user.newPassword;
-    const confirmPassword = user.confirmPassword;
-    try {
-      // this.signin()
-      const confirmSignin = await Auth.confirmSignIn(newPassword, confirmPassword);
-      console.log('Signed in user after aws calling', confirmSignin);
-      return confirmSignin;
-    } catch (error) {
-      return error;
-    }
-
-  }
 
 }

@@ -6,20 +6,24 @@ import { LoginComponent } from './auth/login/login.component';
 import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FirstTimePasswordComponent } from './auth/first-time-password/first-time-password.component';
+import { TestFormComponent } from './test-form/test-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Test2Component } from './test2/test2.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FirstTimePasswordComponent,
+    TestFormComponent,
+    Test2Component,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
