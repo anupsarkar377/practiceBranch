@@ -2,13 +2,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
-import { FirstTimePasswordComponent } from './auth/first-time-password/first-time-password.component';
+import { TestFormComponent } from './test-form/test-form.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'first-time-password', component: FirstTimePasswordComponent }
+  { path: 'test-form', component: TestFormComponent }
 ];
 
 @NgModule({

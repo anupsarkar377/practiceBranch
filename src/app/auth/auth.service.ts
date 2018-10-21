@@ -20,7 +20,6 @@ export class AuthService {
     console.log('signin user: ', JSON.stringify(user));
     const username = user.username;
     const password = user.password;
-
     console.log(username, password);
     try {
       const signedInUser = await Auth.signIn(username, password);
