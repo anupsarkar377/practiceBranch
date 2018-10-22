@@ -3,3 +3,14 @@ button{
     background-color: blue;
     color: white;
 }
+
+
+/**
+Css file for Login Component AIA passwor fields css
+*/
+
+.input-field-password[_ngcontent-c3] {
+    height: 64px;
+    text-align: center;
+    margin-bottom: 48px;
+}
